@@ -1,1 +1,1 @@
-it a code to celebrate my friend's birth
+the repository is to record CYX's learning path and code.
