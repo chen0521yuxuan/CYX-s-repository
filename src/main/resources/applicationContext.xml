@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 定义 Address bean -->
+    <bean id="address" class="com.sharelight.assignment_01.Address">
+        <!-- 使用 property 注入 city 值 -->
+        <property name="city" value="Beijing"/>
+    </bean>
+
+    <!-- 定义 Student bean，通过 setter 注入依赖 -->
+    <bean id="student" class="com.sharelight.assignment_01.Student">
+        <!-- 注入基本类型：name -->
+        <property name="name" value="Zhang San"/>
+        <!-- 注入对象引用：address -->
+        <property name="address" ref="address"/>
+    </bean>
+
+</beans>
